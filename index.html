@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tanishka Sawant, Python developer and aspiring AI engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#F6F7F9;--surface:#fff;--ink:#101828;--muted:#566074;--line:#DDE2EA;--accent:#1F4FD8;--mark:#FFD84D;--pink:#FF6B9D;--mint:#46E0A8;--sky:#7DBCFF;--dk:#101828;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1420;--surface:#171E2D;--ink:#EEF1F6;--muted:#9AA5B8;--line:#263044;--accent:#8FB0FF}}
+:root[data-theme="dark"]{--bg:#0F1420;--surface:#171E2D;--ink:#EEF1F6;--muted:#9AA5B8;--line:#263044;--accent:#8FB0FF}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+main{max-width:940px;margin:0 auto;padding:48px 22px 72px}
+h1,h2,h3{font-weight:800;line-height:1.1;margin:0}
+h1{font-size:clamp(2.4rem,7vw,4.3rem);letter-spacing:-.03em;max-width:14ch}
+h1 span{display:inline-block;margin-right:.22em}
+h2{font-size:1.8rem;margin-bottom:22px;letter-spacing:-.01em}
+h3{font-size:1.12rem;font-weight:600;margin-bottom:6px}
+p{margin:0 0 14px;max-width:62ch}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+section{margin-top:84px}
+.hi{display:inline-block;background:var(--mint);color:var(--dk);font-weight:600;border:2px solid var(--ink);border-radius:999px;padding:4px 16px;margin-bottom:22px}
+.wave{display:inline-block;transform-origin:70% 70%;animation:wave 2.2s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{rotate:0deg}10%{rotate:16deg}20%{rotate:-8deg}30%{rotate:16deg}40%{rotate:-4deg}50%{rotate:10deg}}
+header{position:relative}
+.lede{color:var(--muted);font-size:1.15rem;margin-top:20px}
+.fl{display:none;position:absolute;font-weight:600;font-size:.85rem;padding:6px 12px;border:2px solid var(--ink);border-radius:999px;color:var(--dk);animation:float 6s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes float{50%{translate:0 -16px;rotate:3deg}}
+@media (min-width:780px){.fl{display:block}}
+.demo{margin-top:36px;background:var(--surface);border:2px solid var(--ink);box-shadow:7px 7px 0 var(--ink);border-radius:18px 18px 18px 4px;padding:22px;max-width:660px;position:relative}
+.demo small{color:var(--muted);display:block;margin-bottom:12px}
+.q{font-weight:600;margin-bottom:10px;min-height:1.6em}
+.caret::after{content:"";display:inline-block;width:2px;height:1em;background:var(--ink);margin-left:2px;vertical-align:-2px;animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+mark{color:var(--dk);padding:1px 4px;border-radius:3px;background:linear-gradient(var(--mark),var(--mark)) left/100% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.js mark{background-size:0 100%}
+.js .on mark{animation:sweep 1s ease-out forwards}
+.src{display:inline-block;margin-left:6px;font-size:.8rem;font-weight:600;background:var(--ink);color:var(--bg);border-radius:4px;padding:1px 7px;vertical-align:2px}
+.js .src{opacity:0;scale:.6}
+.js .on .src{animation:pop .5s 1s cubic-bezier(.34,1.56,.64,1) forwards}
+@keyframes sweep{to{background-size:100% 100%}}
+@keyframes pop{to{opacity:1;scale:1}}
+.js h1 span{opacity:0;animation:word .7s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i)*.09s + .1s)}
+@keyframes word{from{opacity:0;translate:0 30px;rotate:-6deg}to{opacity:1;translate:0 0;rotate:0deg}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:8px;border:2px solid var(--ink);color:var(--ink);box-shadow:4px 4px 0 var(--ink);transition:translate .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}
+.btn:hover{translate:-3px -3px;box-shadow:7px 7px 0 var(--ink)}
+.btn:active{translate:3px 3px;box-shadow:0 0 0 var(--ink)}
+.btn.primary{background:var(--pink);color:var(--dk)}
+.rv{translate:0 var(--y,0)}
+.js .rv{opacity:0;--y:34px;transition:opacity .6s,translate .7s cubic-bezier(.34,1.56,.64,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;--y:0px}
+.feature{background:var(--surface);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--mark);border-radius:6px 20px 20px 6px;padding:28px}
+.flow{list-style:none;counter-reset:s;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.flow li{counter-increment:s;position:relative;padding-left:46px;max-width:62ch}
+.flow li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--mark);color:var(--dk);border:2px solid var(--ink);font-weight:800;display:grid;place-items:center}
+.js .in .flow li::before{animation:pop2 .6s cubic-bezier(.34,1.56,.64,1) backwards;animation-delay:calc(var(--k)*.25s + .4s)}
+@keyframes pop2{from{scale:0;rotate:-90deg}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:5px 5px 0 var(--ink);rotate:var(--r,0deg);transition:rotate .3s,box-shadow .3s,scale .3s}
+.card:hover{rotate:0deg;scale:1.03;box-shadow:9px 9px 0 var(--ink)}
+.card p{color:var(--muted);font-size:.98rem;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tags span{border:2px solid var(--ink);border-radius:999px;padding:2px 12px;font-size:.9rem;font-weight:600;color:var(--dk);background:var(--sky);transition:rotate .2s,scale .2s}
+.tags span:nth-child(3n+2){background:var(--mint)}
+.tags span:nth-child(3n){background:var(--pink)}
+.tags span:hover{rotate:-6deg;scale:1.12}
+.band{margin:84px -40px 0;background:var(--mark);border-block:2px solid var(--ink);rotate:-1.5deg;overflow:hidden;color:var(--dk)}
+.track{display:flex;width:max-content;animation:run 28s linear infinite;font-weight:800;font-size:1.3rem;padding:12px 0}
+.track span{padding:0 20px;white-space:nowrap}
+.band:hover .track{animation-play-state:paused}
+@keyframes run{to{translate:-50% 0}}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.path{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px solid var(--ink)}
+.path li{position:relative;margin-bottom:24px;padding-left:18px}
+.path li::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--mark);border:2px solid var(--ink)}
+.path li:last-child::before{background:var(--pink);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--pink)}100%{box-shadow:0 0 0 14px transparent}}
+.path b{display:block}
+.path span{color:var(--muted)}
+footer{margin-top:84px;border-top:2px solid var(--ink);padding-top:26px}
+footer p{max-width:none}
+@media (prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none!important;transition:none!important}
+.js h1 span,.js .rv,.js .src{opacity:1}
+.js mark{background-size:100% 100%}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="hi">Hi, I'm Tanishka <span class="wave">👋</span></div>
+<h1 aria-label="I build AI apps that show their sources."><span style="--i:0">I</span><span style="--i:1">build</span><span style="--i:2">AI</span><span style="--i:3">apps</span><span style="--i:4">that</span><span style="--i:5">show</span><span style="--i:6">their</span><span style="--i:7">sources.</span></h1>
+<p class="lede">B.E. Information Technology graduate (2026) and Python developer, building toward AI engineering with retrieval-augmented generation, machine learning and automation.</p>
+<div class="fl" aria-hidden="true" style="top:10px;right:6%;background:var(--pink);--d:0s">chunk 12</div>
+<div class="fl" aria-hidden="true" style="top:90px;right:22%;background:var(--sky);--d:1.2s">[0.21, -0.40, 0.07]</div>
+<div class="fl" aria-hidden="true" style="top:170px;right:3%;background:var(--mint);--d:2.1s">cosine 0.87</div>
+<div class="fl" aria-hidden="true" style="top:260px;right:14%;background:var(--mark);--d:.7s">page 3</div>
+<div class="demo" id="demo" aria-label="Example answer from my live app">
+<small>A real answer from my live app</small>
+<div class="q" id="tq">What is the Transformer architecture?</div>
+<div><span id="ta">The encoder is a stack of 6 identical layers. </span><mark>Each layer has a multi-head self-attention sub-layer and a feed-forward sub-layer.</mark><span class="src">1706.03762v7.pdf, page 3</span></div>
+</div>
+</header>
+
+<section id="featured">
+<h2>Featured project</h2>
+<div class="feature rv">
+<h3>RAG Document Assistant</h3>
+<p>Ask questions about PDFs and get answers that name the page they came from. If the documents do not contain the answer, it says so instead of guessing.</p>
+<ol class="flow">
+<li style="--k:0">Each PDF page is split into overlapping chunks of text.</li>
+<li style="--k:1">A sentence-transformers model turns every chunk into an embedding.</li>
+<li style="--k:2">The question is embedded too, and the 4 closest chunks are found with cosine similarity.</li>
+<li style="--k:3">Gemini answers using only those chunks and cites the source file and page.</li>
+</ol>
+<p style="margin-top:18px">Retries handle temporary 503 errors from the model API. Deployed on Streamlit Community Cloud.</p>
+<div class="tags"><span>Python</span><span>sentence-transformers</span><span>Gemini API</span><span>NumPy</span><span>Streamlit</span></div>
+<div class="btns">
+<a class="btn primary" href="https://tanishka-rag-assistant.streamlit.app" target="_blank" rel="noopener">Open live demo</a>
+<a class="btn" href="https://github.com/Tanishka1819/rag-doc-assistant" target="_blank" rel="noopener">View code on GitHub</a>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>More things I have built</h2>
+<div class="grid">
+<div class="card rv" style="--r:-1.5deg;--d:0s">
+<h3>ChainTraderAI</h3>
+<p>An AI-driven crypto trading prototype. LSTM models predict prices from market data, trades are logged on a blockchain, and a paper-trading mode tests strategies without real money.</p>
+<div class="tags"><span>TensorFlow</span><span>pandas</span><span>NumPy</span><span>yfinance</span></div>
+</div>
+<div class="card rv" style="--r:1.2deg;--d:.12s">
+<h3>NumberCheckerApp</h3>
+<p>A Flask web app that validates phone numbers and retrieves details about them, with Selenium automation and REST API workflows for structured input and output.</p>
+<div class="tags"><span>Flask</span><span>phonenumbers</span><span>Selenium</span><span>REST</span></div>
+</div>
+<div class="card rv" style="--r:1.4deg;--d:.24s">
+<h3>Student Management System</h3>
+<p>A full create, read, update and delete app for student records, with structured storage and a simple interface.</p>
+<div class="tags"><span>Bottle</span><span>SQLite3</span><span>CRUD</span></div>
+</div>
+<div class="card rv" style="--r:-1.1deg;--d:.36s">
+<h3>Python utility apps</h3>
+<p>A password generator, age finder, motivational quote app and currency converter, built to practise GUI design, API calls and input validation.</p>
+<div class="tags"><span>Tkinter</span><span>APIs</span><span>Debugging</span></div>
+</div>
+</div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="track">
+<span>Python ✦ RAG ✦ Embeddings ✦ LLM APIs ✦ TensorFlow ✦ scikit-learn ✦ Flask ✦ Streamlit ✦ Selenium ✦ SQLite3 ✦ Git ✦</span>
+<span>Python ✦ RAG ✦ Embeddings ✦ LLM APIs ✦ TensorFlow ✦ scikit-learn ✦ Flask ✦ Streamlit ✦ Selenium ✦ SQLite3 ✦ Git ✦</span>
+</div></div>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div class="rv"><h3>Languages and data</h3><div class="tags"><span>Python</span><span>SQLite3</span><span>HTML</span><span>CSS</span><span>Data structures and algorithms</span></div></div>
+<div class="rv" style="--d:.12s"><h3>AI and machine learning</h3><div class="tags"><span>RAG</span><span>Embeddings</span><span>LLM APIs</span><span>TensorFlow</span><span>scikit-learn</span><span>pandas</span><span>NumPy</span></div></div>
+<div class="rv" style="--d:.24s"><h3>Building and tools</h3><div class="tags"><span>Flask</span><span>Bottle</span><span>Streamlit</span><span>Tkinter</span><span>Selenium</span><span>REST APIs</span><span>Git</span><span>Postman</span></div></div>
+</div>
+</section>
+
+<section id="path">
+<h2>How I got here</h2>
+<ol class="path">
+<li class="rv"><b>SSC, Milagris High School</b><span>92%, 2020</span></li>
+<li class="rv" style="--d:.1s"><b>HSC, RPD College Sawantwadi</b><span>72%, 2022</span></li>
+<li class="rv" style="--d:.2s"><b>Python developer training, Kamal Classes</b><span>May to July 2025. Python, object-oriented programming, data structures, databases and data science basics.</span></li>
+<li class="rv" style="--d:.3s"><b>B.E. Information Technology, A.C. Patil College of Engineering</b><span>Graduated 2026, SGPA 8.30</span></li>
+</ol>
+</section>
+
+<footer>
+<h2>Let's talk</h2>
+<p>I am looking for an AI engineering role where I can keep building and learning.</p>
+<div class="btns">
+<a class="btn primary" href="https://github.com/Tanishka1819" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/tanishka-sawant-101509320" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</footer>
+</main>
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var demo=document.getElementById('demo');
+function typeInto(el,text,speed,done){
+ el.textContent='';el.classList.add('caret');var i=0;
+ (function step(){
+  if(i<text.length){el.textContent+=text[i++];setTimeout(step,speed)}
+  else{el.classList.remove('caret');done&&done()}
+ })();
+}
+if(reduce){demo.classList.add('on')}
+else{
+ var q=document.getElementById('tq'),a=document.getElementById('ta');
+ var qt=q.textContent,at=a.textContent;
+ q.textContent='';a.textContent='';
+ setTimeout(function(){
+  typeInto(q,qt,38,function(){
+   setTimeout(function(){typeInto(a,at,22,function(){demo.classList.add('on')})},350);
+  });
+ },1100);
+}
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window&&!reduce){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+ els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
